@@ -10,11 +10,11 @@ package com.example.lab5;
         import androidx.fragment.app.Fragment;
         import androidx.navigation.fragment.NavHostFragment;
 
-        import com.example.lab5.databinding.FragmentSecondBinding;
+        import com.example.lab5.databinding.FragmentThirdBinding;
 
 public class ThirdFragment extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentThirdBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,23 +22,34 @@ public class ThirdFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentThirdBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
 
- /*   public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonthird.setOnClickListener(new View.OnClickListener() {
+        binding.buttonThirdNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                        .navigate(R.id.action_thirdFragment_to_FirstFragment);
+
             }
         });
+
+        binding.buttonThirdPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(R.id.action_thirdFragment_to_SecondFragment);
+
+            }
+        });
+
     }
-*/
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

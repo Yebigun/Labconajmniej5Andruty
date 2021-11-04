@@ -7,4 +7,16 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/snackbar_text1"
+        android:orderInCategory="100"
+        android:title="Good"
+        app:showAsAction="never"    />
+
+    <item
+        android:id="@+id/snackbar_text2"
+        android:orderInCategory="100"
+        android:title="Morning"
+        app:showAsAction="never"    />
+
 </menu>

@@ -2,6 +2,7 @@ package com.example.lab5;
 
 import android.os.Bundle;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +60,19 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if (id == R.id.snackbar_text1)
+        {
+            Snackbar.make(findViewById(R.id.mainLayout), R.string.snackbar1, BaseTransientBottomBar.LENGTH_SHORT ).setAction("Action", null).show();
+            return true;
+        }
+        if (id == R.id.snackbar_text2)
+        {
+            Snackbar.make(findViewById(R.id.mainLayout), R.string.snackbar2, BaseTransientBottomBar.LENGTH_SHORT ).setAction("Action", null).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
